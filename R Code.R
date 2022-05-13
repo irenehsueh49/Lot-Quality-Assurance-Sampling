@@ -28,7 +28,7 @@ decision_rule <- function(upper, lower, alpha=0.10, beta=0.10, n=seq(from=1,to=1
 }
 
 
-### Operating Characteristic Curve
+#Operating Characteristic Curve
 operating_curve <- function(n, d, alpha, beta) 
 {probability <- seq(from=0, to=1, by=0.01)
   p_high <- 1-pbinom(d-1, n, prob=probability)
@@ -39,7 +39,7 @@ operating_curve <- function(n, d, alpha, beta)
 }
 
 
-### Risk Curve
+#Risk Curve
 risk_curve <- function(n, d, target_prob) 
 {probability <- seq(from=0, to=1, by=0.01)
   risk1 <- 1-pbinom(d-1, n, prob=probability[probability < target_prob])
